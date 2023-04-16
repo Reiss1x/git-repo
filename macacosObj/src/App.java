@@ -39,19 +39,14 @@ public class App {
                     for(Macacos m : macacos){
                         //add cocos pares
                         macacos.get(m.getDestinoPar()).addCocosPar(m.getNroDestinoPar());
-
                         //impar
                         macacos.get(m.getDestinoImpar()).addCocosImpar(m.getNroDestinoImpar());
+                        //remove os entregues
                         m.removeCocos();
                     }
                     
                     numRodadas--;
                 }
-                System.out.println("LOL");
-                System.out.println("LOL");
-
-
-                
                 int aux = Integer.MIN_VALUE;
                 int aux1 = 0;
                 for(Macacos m : macacos){
@@ -66,6 +61,5 @@ public class App {
             }
             long duration = (System.nanoTime() - start)/1000000;
             System.out.println("Tempo de execução do algoritmo: "+duration+ "ms");
-            //GIT COMMIT 2
         }     
     }
